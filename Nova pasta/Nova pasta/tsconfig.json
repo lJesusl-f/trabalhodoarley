@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Ambiente */
+    "target": "ES2020",
+    "module": "commonjs",
+
+    /* Estrutura */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Qualidade de código */
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Node */
+    "skipLibCheck": true,
+
+    /* Debug */
+    "sourceMap": true
+  },
+
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
