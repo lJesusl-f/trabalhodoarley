@@ -7,6 +7,6 @@ export class EnviouPropostaState implements LeadState {
   }
 
   desistir(lead: Lead) {
-    lead.status = "PERDIDO";
+    lead.status = "FINALIZADO_SEM_VENDA";
   }
 }
