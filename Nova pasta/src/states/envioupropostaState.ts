@@ -5,4 +5,8 @@ export class EnviouPropostaState implements LeadState {
   avancar(lead: Lead) {
     lead.stage = "AGUARDANDO_RESPOSTA";
   }
+
+  desistir(lead: Lead) {
+    lead.status = "PERDIDO";
+  }
 }
