@@ -37,4 +37,25 @@ export class LeadFacade {
 
     return lead;
   }
+
+  // 🚫 DESISTIR (usando State - sua versão)
+  desistir(id: string) {
+    const lead = this.get(id);
+    if (!lead) throw new Error("Lead não encontrada");
+
+    const state = getState(lead.stage, lead.status);
+    state.desistir(lead);
+
+    this.subject.notify(lead);
+    return lead;
+  }
+
+  // 🗑️ DELETE (sua versão com boolean)
+  delete(id: string): boolean {
+    const index = this.leads.findIndex(l => l.id === id);
+    if (index === -1) return false;
+
+    this.leads.splice(index, 1);
+    return true;
+  }
 }
